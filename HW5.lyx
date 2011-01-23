@@ -283,6 +283,44 @@ status open
 
 \end_deeper
 \end_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+כאשר שכבת הPCT שולחת מחדש חבילה, שכבת הCESPI מגדילה את מונה הrebmun ecneuqeS
+ באחד, וכך שכבת CESPI של מחשב היעד יודעת שמדובר בחבילה אמיתית שנשלחה על
+ ידי השולח ולא זויפה.
+\end_layout
+
+\begin_layout Itemize
+כאשר תוקף שולח מחדש את אותה חבילה במתקפת שידור חוזר, החבילה תגיע עם מספר
+ ecneuqeS נמוך מערך המונה של שכבת הCESPI במחשב היעד, ולכן תידחה.
+\end_layout
+
+\begin_layout Itemize
+תוקף לא יכול לממש התקפת שידור חוזר באמצעות שינוי החבילה, מכיוון שהredaeH
+ noitacitnehtuA מכיל hsaH של שאר החבילה המחושב באמצעות המפתח הפרטי שמוסכם
+ בין שני הצדדים בתקשורת.
+ ללא ידיעת המפתח הפרטי, אין לתוקף דרך לשנות את החבילה באופן שיראה תקין לצד
+ המקבל.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\end_layout
+
 \end_deeper
 \end_body
 \end_document
