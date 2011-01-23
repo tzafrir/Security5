@@ -238,5 +238,41 @@ status open
 (
 \end_layout
 
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+התקשורת במצב edoM lennuT מתבצעת בין שני syawetaG, כאשר הם מבצעים את ההצפנה
+ והפענוח באופן שקוף למשתמשי הקצה.
+ השכבה החדשה נחוצה על מנת לאפשר לsyawetaG לתקשר ביניהם מעל גבי האינטרנט
+ ולהעביר אחד לשני את המידע המוצפן, שיועבר מהyawetaG אל מחשב היעד לאחר הפענוח.
+\end_layout
+
+\begin_layout Enumerate
+בהנחה שכתובת הPI של הyawetaG שונה מזו של הלקוח, גרסה זו לא תעבוד - אם כתובת
+ הPI של הלקוח מופיעה בשכבה החדשה, אז אלגוריתמי הניתוב של המחשבים הזרים באינטרנט
+ יביאו את החבילה למחשב היעד ולא לyawetaG.
+ מחשב היעד באופן כללי אינו מודע להצפנה שעוברים הנתונים בדרך אליו, ובפרט
+ אינו יודע לפענח אותם.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\end_layout
+
+\end_deeper
 \end_body
 \end_document
