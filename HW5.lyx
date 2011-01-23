@@ -261,18 +261,28 @@ status open
 \end_layout
 
 \begin_layout Enumerate
-בהנחה שכתובת הPI של הyawetaG שונה מזו של הלקוח, גרסה זו לא תעבוד - אם כתובת
- הPI של הלקוח מופיעה בשכבה החדשה, אז אלגוריתמי הניתוב של המחשבים הזרים באינטרנט
- יביאו את החבילה למחשב היעד ולא לyawetaG.
- מחשב היעד באופן כללי אינו מודע להצפנה שעוברים הנתונים בדרך אליו, ובפרט
- אינו יודע לפענח אותם.
+גרסה זו תעבוד, בתנאי שהyawetaG הוא צוואר בקבוק ברשת, כך שהנתונים עדיין יעברו
+ דרכו פיזית.
+ )ODOT: למצוא יתרונות(.
+\begin_inset Newline newline
+\end_inset
+
+חסרונות שיטה זו הם:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+חשיפת כתובת היעד למאזין זר - כתובת הPI הפנימית שאיתה התקשורת מתבצעת היא
+ מידע שהיינו רוצים להסתיר מתוקף.
+\end_layout
+
+\begin_layout Itemize
+עומס על הyawetaG - במימוש החדש של הyawetaG עליו לנטר את כל התעבורה שעוברת
+ דרכו.
 \end_layout
 
 \end_deeper
-\begin_layout Enumerate
-
-\end_layout
-
+\end_deeper
 \end_deeper
 \end_body
 \end_document
