@@ -188,6 +188,24 @@ status open
 \end_layout
 
 \begin_layout Enumerate
+כן, באמצעות הוספת החוקים הבאים לטבלה מעל השורה האחרונה:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+)
+\numeric on
+3
+\numeric off
+(
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
 
 \end_layout
 
