@@ -1,4 +1,4 @@
-#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
+#LyX 1.6.7 created this file. For more info see http://www.lyx.org/
 \lyxformat 345
 \begin_document
 \begin_header
@@ -168,11 +168,380 @@ status open
 
 \end_inset
 
-)
-\numeric on
-2
-\numeric off
-(
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+אימות הלקוחות נעשה באמצעות ססמא )
+\lang english
+what you know
+\lang hebrew
+(, באמצעות התקן חכם )
+\lang english
+what you have
+\lang hebrew
+( או שילוב של השניים, בנוסף ליצירת התקשורת הבטוחה באמצעות
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang english
+SSL
+\lang hebrew
+.
+ הבנקים משתמשים ב-
+\lang english
+SSL
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+כיוון שזה פרוטוקול נפוץ ואמין ליצירת קו תקשות מאובטח )הלקוח לא צריך להתקין
+ תוכנה ייעודית (, והוא מאפשר ללקוחות לוודא את אמינות הבנק )אכן הבנק, ולא
+ מתחזה( כחלק מתהליך ההסכמה על פרטי הקו המאובטח.
+\end_layout
+
+\begin_layout Enumerate
+ההבדל בין הפרוטוקול המוצע ל-
+\begin_inset Formula $SSL$
+\end_inset
+
+ הוא בעובדה שהלקוח לא חותם על 
+\begin_inset Formula $pre\_master\_secret$
+\end_inset
+
+, ובכך מפרה את הקישור שיש בפרוטוקול המקורי בין הסוד שנבחר ע"י הלקוח ושאר
+ המידע המשמש לאימות )בפרט - אין חתימה של הסוכן על הסוד(.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+ג'יימס בונד יכול לבצע התקפת
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang english
+man in the middle
+\lang hebrew
+, ולהחליף את 
+\begin_inset Formula $E_{\mbox{pub\_server}}\left(pre\_master\_secret\right)$
+\end_inset
+
+ בהצפנה של סוד כרצונו - 
+\begin_inset Formula $E_{\mbox{pub\_server}}\left(pre\_master\_secret'\right)$
+\end_inset
+
+.
+ השרת יאמת את הסוכן המקורי, אך ימשיך את התקשורת באמצעות המפתח שבונד העביר
+ לו )מכאן בונד ימשיך לתקשר עם השרת, וימנע מהסוכן לשלוח לו הודעות(, לבונד
+ יש את כל המידע הנחוץ לגזירת המפתחות בהם השרת ישתמש, ולכן הוא יכול להמשיך
+ ולתקשרעם השרת כאילו הוא סוכן 
+\begin_inset Formula $BOB$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+כעת הסוכנים חותמים גם על ה-
+\begin_inset Formula $pre\_master\_secret$
+\end_inset
+
+ ולכן ההתקפה לעיל לא תעבוד.
+ עם זאת, ג'יימס עדיין יוכל להתחזות לסוכן
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang english
+BOB
+\lang hebrew
+, אך הפעם לא יוכל לבחור את 
+\begin_inset Formula $pre\_master\_secret'$
+\end_inset
+
+, אלא יאלץ לבחור בחזקה של 
+\begin_inset Formula $\left(m_{1},m_{2}\right)$
+\end_inset
+
+ מודולו 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ את שתי ההודעות לעיל הוא יודע, חישוב חזקה מודולו 
+\begin_inset Formula $n$
+\end_inset
+
+ הוא הליך פשוט, ואת החתימה הוא יוכל להחליף ב-
+\begin_inset Formula $\left[Sig\left(m_{1},m_{2}\right)\right]^{k}$
+\end_inset
+
+ )כאשר 
+\begin_inset Formula $k$
+\end_inset
+
+ היא החזקה שנבחרה(.
+ מתכונות חשבון מודולו )ובפרט - החולשה שראינו ב-
+\begin_inset Formula $RSA$
+\end_inset
+
+ כפונקציית חתימה ללא תמצות( חתימה זו מתאימה לחתימה על 
+\begin_inset Formula $\left(m_{1},m_{2}\right)^{k}$
+\end_inset
+
+, ולכן הוא יוכל להמשיך לתקשר עם השרת באופן דומה לזה שהוצג במקרה הקודם.
+\end_layout
+
+\begin_layout Enumerate
+ג'יימס בונד אינו יכול להתחזות לשרת בפני סוכני בוב.
+ תהליך אימות השרת ב-
+\begin_inset Formula $XXL$
+\end_inset
+
+ כפי שהוצג זהה לתהליך ב-
+\begin_inset Formula $SSL$
+\end_inset
+
+.
+ לכן אם ג'יממס היה יכול להתחזות לשרת בפני סוכני
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang english
+BOB
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+הוא היה יכול לעשות זאת גם בשימוש בפרוטוקול 
+\begin_inset Formula $SSL$
+\end_inset
+
+ הסטנדרטי - ולא ידועה לנו מתקפה כזו.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+בונד יוכל להאזין לתקשורת בין סוכן 
+\begin_inset Formula $X$
+\end_inset
+
+ לשרת, ולשמור 
+\begin_inset Formula $server\_random_{1}$
+\end_inset
+
+ ואת - 
+\begin_inset Formula $Sig\left(server\_random_{1}\right)$
+\end_inset
+
+ המתאים ללקוח )שני אלו עוברים באופן פומבי במהלך ההתקשרות(.
+ בפעם הבאה שאותו הסוכן 
+\begin_inset Formula $X$
+\end_inset
+
+ מתחבר לשרת ג'יימס יפעיל את התקפת
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang english
+man in the middle
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+שראינו לעיל, כאשר הפעם הוא יחליף את 
+\begin_inset Formula $pre\_master\_secret$
+\end_inset
+
+ ב-
+\begin_inset Formula $server\_random_{1}$
+\end_inset
+
+ )שהוא שמר מההתקשרות הקודמת(, את הערך הזה הוא יודע, והוא יודע את החתימה
+ המתאימה לו ע"פ סכמת החתימה של הסוכן 
+\begin_inset Formula $X$
+\end_inset
+
+ - לכן הוא יכול להחליף את החלקים הרלוונטיים בהתקשרות בחלקים המתאימים ל-
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+
+\begin_inset Formula $server\_random_{1}$
+\end_inset
+
+, וליצור תקשורת מאובטחת מול השרת.
+\end_layout
+
+\begin_layout Enumerate
+בדומה לסעיף הקודם - לא שינינו את האופן בו הלקוח מוודא את אמינות השרת, ולכן
+ מבחינת התחזות לשרת הפרוטוקול בטוח כמו 
+\begin_inset Formula $SSL$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
