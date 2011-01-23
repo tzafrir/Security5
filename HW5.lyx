@@ -122,6 +122,40 @@ R{גיא שקד}
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size large
+\emph off
+\bar no
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\noun default
+\color inherit
+036567055
 \end_layout
 
 \begin_layout Enumerate
@@ -204,11 +238,5 @@ status open
 (
 \end_layout
 
-\begin_deeper
-\begin_layout Enumerate
-
-\end_layout
-
-\end_deeper
 \end_body
 \end_document
