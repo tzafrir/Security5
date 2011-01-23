@@ -124,5 +124,68 @@ R{גיא שקד}
 
 \end_layout
 
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+)
+\numeric on
+2
+\numeric off
+(
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+שרת האינטרנט SW חשוף לכל התעבורה הנכנסת בפרוטוקול PTTH, ולכן חשוף להתקפות
+ ברמת האפליקציה על שרת האינטרנט.
+ בנוסף הוא נמצא מאחורי הפיירוול הארגוני, ולכן ברגע שנפל קורבן למתקפה, לתוקפים
+ יש גישה לרשת הפנימית של החברה.
+\end_layout
+
+\begin_layout Enumerate
+החיבור של העולם לשרת האינטרנט יתבצע באמצעות שרת הYXORP, כאשר ישנו LLAWERIF
+ בינו לבין הרשת הפנימית של החברה.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\end_layout
+
+\end_deeper
 \end_body
 \end_document
