@@ -2044,9 +2044,34 @@ status open
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+מבחינת יעילות השיטה החדשה פחות יעילה מהישנה באופן כללי מכיוון ששכבת הCESPI
+ נדרשת לפענח מעט יותר נתונים, ובאופן פרטי עבור המקרה שבו החבילה נוצרה על
+ ידי תוקף למטרת מתקפת שידור חוזר - במקרה זה בשיטה הישנה לא בוצע פענוח כלל
+ וכעת יש צורך לפענח את המונה.
+\end_layout
+
+\begin_layout Itemize
+מבחינת בטיחות השיטה החדשה פחות בטוחה - תוקף יכול לנצל את השינוי ביעילות
+ )שהוא שינוי בסדר גודל( ולשלוח ליעד ההתקפה מספר גדול של חבילות שידור חוזר.
+ היעד נדרש לפענח את מוני כל החבילות הנכנסות לפני שהוא יודע אם לדחות או לקבל
+ אותן, ונוצרת מתקפת ecivres fo laineD.
+\end_layout
+
+\end_deeper
 \end_deeper
 \end_body
 \end_document
